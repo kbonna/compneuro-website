@@ -1,0 +1,50 @@
+:root {
+    /* Fonts */
+    --font-ss: 'Raleway', sans-serif;
+    --font-se: 'Spectral', serif;
+
+    --fw-bold: 600;
+    --fw-medium: 500;
+    --fw-normal: 400;
+
+    --fs-common: 1rem;
+    --fs-menu-item: 1rem;
+    --fs-manifest: 1.2rem;
+    --fs-section-title: 1.5rem;
+    --fs-project-title: 1.1rem;
+    --fs-project-desc: 1rem;
+    --fs-address: 0.8rem;
+    --fs-btn: 1rem;
+
+    /* Spacing */
+    --max-width: 1100px; // Width of main container
+    --padding-horiz-container: 20px; // Controls spacing between screen border on small screen
+    --margin-bottom: 25px; // Controls vertical spacing between elements
+    --sep-thickness: 2px; // Thickness of gray separator
+
+    // Header
+    --padding-vert-header: 20px; // Controls header heigth
+    --margin-left-link: 10px; // Spacing between menu items
+
+    // Footer
+    --size-social-icon: 2.25em; // Controls social icon size
+    --size-social-icon-small: 1.5em; // Controls social icon size
+    --height-logo: 90px; // Controls NCU logo size
+    --padding-vert-footer: 10px; // Controls footer heigth
+
+    /* Colors */
+    --col-dark: #222;
+    --col-gray: #666;
+    --col-subtle: #ddd;
+    --col-light: #fefefe;
+    --col-accent: #98fb98;
+    --col-accent-dark: #058505;
+}
+
+// Breakpoints
+$break-header: 600px;
+$break-footer: 610px;
+$break-research: 600px;
+$break-project: 700px;
+$break-team: 700px;
+$break-contact: 850px;

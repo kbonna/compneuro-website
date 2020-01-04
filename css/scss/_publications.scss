@@ -1,0 +1,26 @@
+main {
+    flex-grow: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+.papers {
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+    font-family: var(--font-ss);
+
+    &__ul {
+        padding: 0.5em 1em;
+        font-size: 1rem;
+        font-weight: normal;
+        font-family: var(--font-se);
+    }
+
+    &__li {
+        margin-bottom: 10px;
+    }
+}

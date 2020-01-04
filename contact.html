@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/contact.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Spectral:200,300,400,500,600,700,800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/1a78961bbe.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/contact.js" defer></script>
+        <title>Computational Neuroimaging Team</title>
+    </head>
+    <body>
+        <header>
+            <div class="container container--header">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="index.html" class="logo__link">
+                        <h1 class="logo__text">
+                            <span class="logo__accent">Comp</span
+                            >utational<br /><span class="logo__accent"
+                                >Neuro</span
+                            >imaging Team
+                        </h1>
+                    </a>
+                </div>
+
+                <!-- burger -->
+                <input type="checkbox" class="burger" />
+                <div class="burger__outer">
+                    <div class="burger__line"></div>
+                </div>
+
+                <!-- menu -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">
+                                Research
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="team.html" class="nav__link">
+                                Team
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="publications.html" class="nav__link">
+                                Publications
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 class="section-title">Contact</h1>
+
+                <div class="wrapper">
+                    <!-- contact form -->
+                    <form
+                        action="https://formspree.io/xoqjbwvl"
+                        method="POST"
+                        class="contact"
+                    >
+                        <!-- name input -->
+                        <label class="contact__label" for="contact__name"
+                            >Name
+                        </label>
+                        <input
+                            type="text"
+                            name="name"
+                            class="contact__input contact__input--name"
+                            id="contact__name"
+                            placeholder="Your Name"
+                        />
+                        <span
+                            id="contact__name-error"
+                            class="contact__error"
+                        ></span>
+
+                        <!-- email input -->
+                        <label class="contact__label" for="contact__email"
+                            >Email
+                        </label>
+                        <input
+                            type="text"
+                            name="_replyto"
+                            class="contact__input contact__input--email"
+                            id="contact__email"
+                            placeholder="Your Email"
+                        />
+                        <span
+                            id="contact__email-error"
+                            class="contact__error"
+                        ></span>
+
+                        <!-- title input -->
+                        <label class="contact__label" for="contact__title"
+                            >Title
+                        </label>
+                        <input
+                            type="text"
+                            name="title"
+                            class="contact__input contact__input--title"
+                            id="contact__title"
+                            placeholder="Title"
+                        />
+                        <span
+                            id="contact__title-error"
+                            class="contact__error"
+                        ></span>
+
+                        <!-- message input -->
+                        <label class="contact__label" for="contact__message"
+                            >Message
+                        </label>
+                        <textarea
+                            name="message"
+                            class="contact__textarea"
+                            id="contact__message"
+                            placeholder="Your Message"
+                        ></textarea>
+                        <span
+                            id="contact__message-error"
+                            class="contact__error"
+                        ></span>
+
+                        <!-- submit button -->
+                        <button
+                            id="contact__btn"
+                            class="btn contact__btn"
+                            type="submit"
+                        >
+                            Send
+                        </button>
+                    </form>
+
+                    <!-- large address field -->
+                    <div class="address-large">
+                        COMPUTATIONAL NEUROIMAGING TEAM<br />
+                        Centre for Modern Interdisciplinary Technologies<br />
+                        Nicolaus Copernicus University in Toruń<br />
+                        Wileńska 4, 87-100 Toruń, Poland<br /><br />
+                        +48 668 336 431<br />
+                        email: compneuro.ncu@gmail.com
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container container--footer">
+                <!-- social icons -->
+                <div class="social">
+                    <a
+                        href="https://github.com/nbraingroup"
+                        class="social__link social__link--github"
+                    >
+                        <i class="social__icon fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social__link social__link--twitter">
+                        <i class="social__icon fab fa-twitter"></i>
+                    </a>
+                </div>
+
+                <!-- contact information -->
+                <div class="address">
+                    <a href="https://www.umk.pl/en/" class="address__uni-link">
+                        <img
+                            src="img/ncu-logo.svg"
+                            alt=""
+                            class="address__uni-logo"
+                        />
+                    </a>
+                    <div class="address__group">
+                        COMPUTATIONAL NEUROIMAGING TEAM<br />
+                        Centre for Modern Interdisciplinary Technologies<br />
+                        Nicolaus Copernicus University in Toruń<br />
+                        Wileńska 4, 87-100 Toruń, Poland<br />
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

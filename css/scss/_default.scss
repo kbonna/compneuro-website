@@ -1,0 +1,75 @@
+/* Mixins */
+@mixin header_style($font_size) {
+    font-family: var(--font-ss);
+    font-weight: var(--fw-bold);
+    font-size: $font_size;
+}
+
+@mixin separator_pseudo {
+    content: '';
+    background-color: var(--col-subtle);
+    position: absolute;
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+body {
+    font-family: var(--font-se);
+    font-size: var(--fs-common);
+    color: var(--col-dark);
+    background-color: var(--col-light);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--padding-horiz-container);
+    max-width: var(--max-width);
+}
+
+.section-title {
+    @include header_style(var(--fs-section-title));
+    margin-bottom: var(--margin-bottom);
+}
+
+.btn {
+    font-family: var(--ff-se);
+    font-size: var(--fs-btn);
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--col-dark);
+    cursor: pointer;
+
+    display: block;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    margin-bottom: 0px;
+    padding: 0.25em 3em;
+
+    transition: background-color 100ms ease-in-out;
+
+    &:hover {
+        background-color: var(--col-subtle);
+    }
+
+    &:focus {
+        outline: 3px solid var(--col-accent);
+    }
+}

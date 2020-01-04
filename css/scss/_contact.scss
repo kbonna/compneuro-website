@@ -1,0 +1,114 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $break-contact) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.contact {
+    --border-radius: 4px;
+    --col-error: rgb(212, 0, 0);
+
+    margin-bottom: var(--margin-bottom);
+    width: 100%;
+    max-width: 400px;
+
+    font-size: var(--fs-common);
+    font-family: var(--font-se);
+    line-height: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    &__input,
+    &__textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--col-gray);
+        border-radius: var(--border-radius);
+        padding: 0.2rem 0.5rem;
+        font-family: inherit;
+        font-size: inherit;
+        position: relative;
+    }
+
+    &__input--error {
+        border: 1px solid var(--col-error);
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__error {
+        font-size: 0.85em;
+        display: inline-block;
+        position: relative;
+        color: var(--col-error);
+        left: 0.5rem;
+        line-height: 1.75;
+        min-height: 1.75em;
+        user-select: none;
+    }
+
+    &__textarea {
+        min-height: 150px;
+        resize: none;
+    }
+
+    &__btn {
+        border: 1px solid var(--col-gray);
+        border-radius: var(--border-radius);
+        text-transform: uppercase;
+        font-family: var(--font-ss);
+        font-weight: var(--fw-bold);
+        box-shadow: none;
+        align-self: center;
+        line-height: 1;
+        padding: 0.5rem 2rem;
+    }
+
+    @media screen and (min-width: $break-contact) {
+        flex-basis: 50%;
+    }
+}
+
+.address-large {
+    order: -1;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.15rem;
+    margin-bottom: var(--margin-bottom);
+    padding-bottom: var(--margin-bottom);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--col-subtle);
+        height: var(--sep-thickness);
+    }
+
+    @media screen and (min-width: $break-contact) {
+        order: initial;
+        padding-left: 1em;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        &::after {
+            bottom: 0;
+            top: 0;
+            left: 0;
+            height: 100%;
+            right: initial;
+            width: var(--sep-thickness);
+        }
+    }
+}
