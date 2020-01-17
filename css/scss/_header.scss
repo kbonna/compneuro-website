@@ -26,6 +26,7 @@ header {
     &__accent {
         color: var(--col-accent);
         letter-spacing: 2px;
+        @include glow_text;
     }
 }
 
@@ -161,6 +162,7 @@ header {
         display: block;
         text-align: center;
         padding: var(--padding-vert-header) 0px;
+        position: relative;
     }
 
     &__link:hover {
@@ -178,6 +180,18 @@ header {
         &__link {
             padding: 0 0;
             margin-left: calc(2 * var(--margin-left-link));
+        }
+
+        &__link--active::after {
+            content: '';
+            position: absolute;
+            background-color: var(--col-accent);
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 1px;
+            @include glow_box;
         }
     }
 }

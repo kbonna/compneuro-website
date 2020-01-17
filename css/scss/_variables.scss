@@ -38,8 +38,11 @@
     --col-subtle: #ddd;
     --col-light: #fefefe;
     --col-accent: #98fb98;
-    --col-accent-dark: #058505;
+    --col-accent-dark: #678967;
+    --col-accent-dark-hover: #9fb69f;
 }
+
+$col-accent: #98fb98;
 
 // Breakpoints
 $break-header: 600px;

@@ -30,7 +30,8 @@
   --col-subtle: #ddd;
   --col-light: #fefefe;
   --col-accent: #98fb98;
-  --col-accent-dark: #058505;
+  --col-accent-dark: #678967;
+  --col-accent-dark-hover: #9fb69f;
 }
 
 /* Mixins */
@@ -102,7 +103,25 @@ body {
 }
 
 .btn:focus {
-  outline: 3px solid var(--col-accent);
+  outline: none;
+  -webkit-box-shadow: 0 0 4px rgba(152, 251, 152, 0.5), 0 0 7px rgba(152, 251, 152, 0.75), 0 0 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 4px rgba(152, 251, 152, 0.5), 0 0 7px rgba(152, 251, 152, 0.75), 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.link:link,
+.link:visited,
+.link:active {
+  color: var(--col-accent-dark);
+  -webkit-transition: color 100ms ease-in-out;
+  transition: color 100ms ease-in-out;
+}
+
+.link:hover {
+  color: var(--col-accent-dark-hover);
 }
 
 /* --- Typography & Colors---*/
@@ -132,6 +151,7 @@ header {
 .logo__accent {
   color: var(--col-accent);
   letter-spacing: 2px;
+  text-shadow: 0 0 2px rgba(152, 251, 152, 0.2), 0 0 5px rgba(152, 251, 152, 0.4);
 }
 
 .nav {
@@ -280,6 +300,7 @@ header {
   display: block;
   text-align: center;
   padding: var(--padding-vert-header) 0px;
+  position: relative;
 }
 
 .nav__link:hover {
@@ -301,6 +322,18 @@ header {
   .nav__link {
     padding: 0 0;
     margin-left: calc(2 * var(--margin-left-link));
+  }
+  .nav__link--active::after {
+    content: '';
+    position: absolute;
+    background-color: var(--col-accent);
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    -webkit-box-shadow: 0 0 2px rgba(152, 251, 152, 0.5), 0 0 5px rgba(152, 251, 152, 0.75);
+            box-shadow: 0 0 2px rgba(152, 251, 152, 0.5), 0 0 5px rgba(152, 251, 152, 0.75);
   }
 }
 

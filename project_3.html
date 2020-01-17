@@ -44,7 +44,10 @@
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link">
+                            <a
+                                href="index.html"
+                                class="nav__link nav__link--active"
+                            >
                                 Research
                             </a>
                         </li>
@@ -73,54 +76,102 @@
             <main class="project-full">
                 <img
                     class="project-full__logo"
-                    src="https://via.placeholder.com/200x100.png"
+                    src="img/project_3.png"
                     alt="project 3 logo"
                 />
                 <h1 class="project-full__title">
                     Reproducible neuroimaging
                 </h1>
-                <p class="project-full__paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam nulla culpa sunt, adipisci ab consectetur aliquam
-                    temporibus voluptatibus enim tempora beatae quod
-                    necessitatibus ad facere fuga incidunt aspernatur eveniet
-                    vero deleniti nisi sequi. Delectus, labore unde optio
-                    beatae, illum quas cum consequatur suscipit, porro ratione
-                    quos! Non, sint, odio molestias, alias quas fugiat libero
-                    sed explicabo excepturi maxime quia. Iste qui officiis nulla
-                    fuga et dignissimos culpa itaque fugit dolorem dolore
-                    doloremque voluptatibus earum eveniet, harum consequuntur
-                    debitis maxime corporis numquam eum dolores quos pariatur
-                    atque quae. Iusto numquam veniam in ab voluptates deleniti
-                    quos, error placeat, voluptatibus nulla laborum?
+                <p
+                    class="project-full__paragraph project-full__paragraph--half-margin"
+                >
+                    Neuroimaging tools and methods enable us to discover the
+                    underlying neuronal mechanisms of cognitive functions. Yet,
+                    we observe growing concerns about the reproducibility of
+                    neuroimaging findings. The variety of data processing
+                    pipelines applied by different labs, no code and data
+                    sharing, small sample sizes, and bad research practices
+                    undermine the trust of scientists in the results of multiple
+                    neuroimaging studies. These concerns resulted in a strong
+                    open science movement promoted by researchers around the
+                    world. In our team, we continually strive to make our
+                    research more reproducible by using open source tools,
+                    standard data organization (BIDS), and sharing our code and
+                    data. We organize and attend to Brainhack events and
+                    willingly teach students of programming, data science, and
+                    git. By collaborating closely with Student Neuroimaging
+                    Club, we seek to make neuroimaging data analysis more
+                    accessible to everyone. We develop and contribute to
+                    open-source tools dedicated to neuroimaging data processing,
+                    in particular:
                 </p>
+                <ul class="project-full__ul">
+                    <li class="project-full__li">
+                        We develop
+                        <a
+                            href="https://github.com/nbraingroup/fmridenoise"
+                            class="link"
+                            >fMRIDenoise tool</a
+                        >, dedicated to automated denoising, denoising
+                        strategies comparison, and functional connectivity data
+                        quality control
+                    </li>
+                    <li class="project-full__li">
+                        We contribute to
+                        <a
+                            href="https://github.com/poldracklab/fmriprep"
+                            class="link"
+                            >fMRIPrep</a
+                        >
+                        pipeline, a robust and easy-to-use functional magnetic
+                        resonance imaging (fMRI) data preprocessing pipeline,
+                    </li>
+                    <li class="project-full__li">
+                        We contribute to
+                        <a
+                            href="https://github.com/poldracklab/fitlins"
+                            class="link"
+                            >FitLins tool</a
+                        >
+                        for estimating linear models from preprocessed fMRI data
+                        in BIDS format.
+                    </li>
+                </ul>
                 <img
-                    src="https://via.placeholder.com/300x300.png"
+                    src="img/project_3_fig_1.png"
                     alt="project 3 figure"
                     class="project-full__img"
                 />
-                <p class="project-full__paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Officia necessitatibus vitae, ipsam corrupti, totam, quia
-                    ducimus nisi illo minima dolorem laborum quae nobis!
-                    Distinctio autem vitae perspiciatis, quam officiis neque
-                    necessitatibus blanditiis ea beatae, sunt suscipit soluta
-                    alias. Debitis eos accusantium animi fugiat excepturi itaque
-                    dolore quaerat? Enim a tempora ad expedita maiores qui. Ex,
-                    facilis, rerum consequuntur totam quia quae possimus
-                    expedita voluptate aliquid incidunt voluptas quaerat
-                    exercitationem voluptates aperiam cupiditate vel! Numquam,
-                    assumenda reprehenderit? Cum animi, ut consequuntur
-                    perspiciatis dolore doloribus dolorum recusandae impedit
-                    exercitationem labore rerum possimus, praesentium repellat
-                    ad velit similique itaque ex vitae iure! Animi et excepturi
-                    eius debitis suscipit id! Repellat rem consequatur cumque
-                    enim fugit, nihil quod dicta cum consectetur natus, saepe
-                    neque delectus ut sed sapiente ipsa repellendus nulla ex
-                    vitae aspernatur doloremque? A quibusdam veniam repellendus
-                    officiis excepturi, ipsa adipisci enim fugit autem eos ex ab
-                    neque alias quod magnam voluptatibus.
-                </p>
+                <h2 class="project-full__subtitle">Funding:</h2>
+                <ul class="project-full__ul">
+                    <li class="project-full__li">
+                        The Foundation for Polish Science, START & prof. Barbara
+                        Skarga fellowship,
+                    </li>
+                    <li class="project-full__li">
+                        Ministry of Science and Higher Education,
+                        <span class="italic"
+                            >project: Excellence Initiative - Research
+                            University</span
+                        >, awarded to Nicolaus Copernicus University in Toruń.
+                        Priority research area: Neuroinformatics.
+                    </li>
+                </ul>
+                <h2 class="project-full__subtitle">Collaborators:</h2>
+                <ul class="project-full__ul">
+                    <li class="project-full__li">
+                        Russ Poldrack (Stanford University, USA)
+                    </li>
+                    <li class="project-full__li">
+                        Oscar Esteban (Stanford University, USA)
+                    </li>
+                    <li class="project-full__li">
+                        William Thompson (Stanford University, USA)
+                    </li>
+                    <li class="project-full__li">
+                        Chris Markiewicz (Stanford University, USA)
+                    </li>
+                </ul>
             </main>
 
             <!-- navigate to other projects -->
@@ -136,7 +187,7 @@
                         dolore magna aliqua.
                     </p>
                     <img
-                        src="https://via.placeholder.com/200x100.png"
+                        src="img/project_1.png"
                         alt="project 1 logo"
                         class="project-mini__logo"
                     />
@@ -156,7 +207,7 @@
                         dolore magna aliqua.
                     </p>
                     <img
-                        src="https://via.placeholder.com/200x100.png"
+                        src="img/project_2.png"
                         alt="project 2 logo"
                         class="project-mini__logo"
                     />

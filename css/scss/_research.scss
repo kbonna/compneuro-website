@@ -36,14 +36,15 @@
     /* Layout */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     position: relative;
     padding: var(--vert-padding) var(--horiz-padding);
 
     &__logo {
         margin-bottom: var(--margin-bottom-logo);
+        max-width: 250px;
     }
 
     &__title {
@@ -90,9 +91,14 @@
         &:last-of-type::after {
             width: 0px;
         }
+
+        &__btn-spacer {
+            flex-grow: 1;
+        }
     }
 
     @media screen and (min-width: 800px) {
         --horiz-padding: 4em;
+        justify-content: flex-start;
     }
 }

@@ -23,6 +23,14 @@ const collaborators = [
         project: ' Reproducible neuroimaging',
         people: 'Russell Poldrack, Rastko Ciric',
         lonLat: [-122.169767, 37.427547]
+    },
+    {
+        name: 'maxplanck',
+        fullName: 'Lise Meitner Group for Environmental Neuroscience',
+        university: 'Max Planck Institute for Human Development',
+        project: 'Reorganization of brain network',
+        people: 'Simone Kühn',
+        lonLat: [13.303811, 52.46873]
     }
 ];
 
@@ -30,13 +38,14 @@ const collaborators = [
 const pupupContainer = document.getElementById('popup');
 const popupContent = document.getElementById('popup__content');
 const popupClose = document.getElementById('popup__close');
+const mapElement = document.getElementById('map');
 
 // Icon style
 const markerStyle = new ol.style.Style({
     image: new ol.style.Icon({
         src: 'img/pin.svg',
         anchor: [0.5, 1],
-        scale: 1
+        scale: 0.1
     })
 });
 
@@ -124,6 +133,14 @@ function init() {
     /**********
      * Popups *
      **********/
+    map.on('pointermove', function(event) {
+        if (map.hasFeatureAtPixel(event.pixel) === true) {
+            mapElement.style.cursor = 'pointer';
+        } else {
+            mapElement.style.cursor = 'default';
+        }
+    });
+
     map.on('singleclick', function(event) {
         if (map.hasFeatureAtPixel(event.pixel) === true) {
             const feature = map.getFeaturesAtPixel(event.pixel)[0];
@@ -137,7 +154,7 @@ function init() {
                  <h3 class="popup__subtitle">${collaborator.university}</h3>
                  <span class="popup__line"><span>Collaborators</span>: ${collaborator.people}</span>
                  <span class="popup__line"><span>Project</span>: ${collaborator.project}</span>`;
-
+            mapElement.style.cursor = 'default';
             overlay.setPosition(coordinate);
         } else {
             closeOverlay();

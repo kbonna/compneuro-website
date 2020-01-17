@@ -11,6 +11,14 @@
     position: absolute;
 }
 
+@mixin glow_text {
+    text-shadow: 0 0 2px rgba($col-accent, 0.2), 0 0 5px rgba($col-accent, 0.4);
+}
+
+@mixin glow_box {
+    box-shadow: 0 0 2px rgba($col-accent, 0.5), 0 0 5px rgba($col-accent, 0.75);
+}
+
 /* Reset */
 *,
 *::after,
@@ -70,6 +78,23 @@ body {
     }
 
     &:focus {
-        outline: 3px solid var(--col-accent);
+        outline: none;
+        box-shadow: 0 0 4px rgba($col-accent, 0.5),
+            0 0 7px rgba($col-accent, 0.75), 0 0 5px rgba(black, 0.75);
     }
+}
+
+.italic {
+    font-style: italic;
+}
+
+.link:link,
+.link:visited,
+.link:active {
+    color: var(--col-accent-dark);
+    transition: color 100ms ease-in-out;
+}
+
+.link:hover {
+    color: var(--col-accent-dark-hover);
 }
