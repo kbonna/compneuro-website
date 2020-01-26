@@ -7,10 +7,12 @@
   --fw-normal: 400;
   --fs-common: 1rem;
   --fs-menu-item: 1rem;
-  --fs-manifest: 1.2rem;
+  --fs-manifest: 1.1rem;
   --fs-section-title: 1.5rem;
   --fs-project-title: 1.1rem;
   --fs-project-desc: 1rem;
+  --fs-member-title: 1.1rem;
+  --fs-member-desc: 1rem;
   --fs-address: 0.8rem;
   --fs-btn: 1rem;
   /* Spacing */
@@ -110,6 +112,10 @@ body {
 
 .italic {
   font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .link:link,
@@ -414,7 +420,7 @@ footer {
 }
 
 .social__link--graduate:hover {
-  color: maroon;
+  color: black;
 }
 
 .social__link--twitter:hover {
@@ -569,6 +575,8 @@ footer {
 .project__logo {
   margin-bottom: var(--margin-bottom-logo);
   max-width: 250px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .project__title {

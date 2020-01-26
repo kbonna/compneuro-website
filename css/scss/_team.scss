@@ -23,9 +23,9 @@
     --horiz-padding: 2rem;
 
     // Space between elements
-    --margin-bottom-img: 1.25em;
-    --margin-bottom-name: 0.25em;
-    --margin-bottom-desc: 1.25em;
+    --margin-bottom-img: 2em;
+    --margin-bottom-name: 0.5em;
+    --margin-bottom-desc: 2em;
 
     /* Layout */
     display: flex;
@@ -37,21 +37,19 @@
     max-width: 400px;
 
     &__img {
-        border: 1px solid var(--col-dark);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         margin-bottom: var(--margin-bottom-img);
         width: 150px;
     }
 
     &__name {
-        font-size: 1.4em;
-        font-weight: var(--fw-bold);
-        line-height: 1;
+        @include header_style(var(--fs-member-title));
         margin-bottom: var(--margin-bottom-name);
     }
 
     &__desc {
-        font-size: 0.9rem;
-        line-height: 1.2;
+        font-size: var(--fs-member-desc);
+        // line-height: 1.2;
         margin-bottom: var(--margin-bottom-desc);
     }
 

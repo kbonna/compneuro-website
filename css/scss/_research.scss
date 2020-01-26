@@ -45,6 +45,7 @@
     &__logo {
         margin-bottom: var(--margin-bottom-logo);
         max-width: 250px;
+        @include box_shadow();
     }
 
     &__title {

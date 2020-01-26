@@ -8,10 +8,12 @@
   --fw-normal: 400;
   --fs-common: 1rem;
   --fs-menu-item: 1rem;
-  --fs-manifest: 1.2rem;
+  --fs-manifest: 1.1rem;
   --fs-section-title: 1.5rem;
   --fs-project-title: 1.1rem;
   --fs-project-desc: 1rem;
+  --fs-member-title: 1.1rem;
+  --fs-member-desc: 1rem;
   --fs-address: 0.8rem;
   --fs-btn: 1rem;
   /* Spacing */
@@ -111,6 +113,10 @@ body {
 
 .italic {
   font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .link:link,
@@ -415,7 +421,7 @@ footer {
 }
 
 .social__link--graduate:hover {
-  color: maroon;
+  color: black;
 }
 
 .social__link--twitter:hover {
@@ -538,9 +544,9 @@ footer {
   /* Variables */
   --vert-padding: 2.5rem;
   --horiz-padding: 2rem;
-  --margin-bottom-img: 1.25em;
-  --margin-bottom-name: 0.25em;
-  --margin-bottom-desc: 1.25em;
+  --margin-bottom-img: 2em;
+  --margin-bottom-name: 0.5em;
+  --margin-bottom-desc: 2em;
   /* Layout */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,21 +564,21 @@ footer {
 }
 
 .member__img {
-  border: 1px solid var(--col-dark);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin-bottom: var(--margin-bottom-img);
   width: 150px;
 }
 
 .member__name {
-  font-size: 1.4em;
+  font-family: var(--font-ss);
   font-weight: var(--fw-bold);
-  line-height: 1;
+  font-size: var(--fs-member-title);
   margin-bottom: var(--margin-bottom-name);
 }
 
 .member__desc {
-  font-size: 0.9rem;
-  line-height: 1.2;
+  font-size: var(--fs-member-desc);
   margin-bottom: var(--margin-bottom-desc);
 }
 
