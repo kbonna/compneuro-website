@@ -15,7 +15,7 @@
     position: relative;
     margin-bottom: var(--margin-bottom);
 
-    line-height: 1.75;
+    line-height: 1.6;
     text-align: left;
 
     &__logo {
@@ -65,7 +65,7 @@
     }
 
     @media screen and (min-width: $break-project) {
-        padding-right: var(--margin-bottom);
+        padding-right: 55px;
 
         &__logo {
             align-self: flex-start;

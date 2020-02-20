@@ -21,7 +21,8 @@ const collaborators = [
         fullName: 'The Poldrack Lab',
         university: 'Stanford University',
         project: ' Reproducible neuroimaging',
-        people: 'Russell Poldrack, Rastko Ciric',
+        people:
+            'Russell Poldrack, Oscar Esteban, Chris Markiewicz, William Thompson',
         lonLat: [-122.169767, 37.427547]
     },
     {

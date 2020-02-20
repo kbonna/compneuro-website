@@ -82,6 +82,10 @@ body {
   margin-bottom: var(--margin-bottom);
 }
 
+.section-title--mb-large {
+  margin-bottom: calc(2 * var(--margin-bottom));
+}
+
 .btn {
   font-family: var(--ff-se);
   font-size: var(--fs-btn);

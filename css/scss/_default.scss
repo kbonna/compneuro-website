@@ -57,6 +57,10 @@ body {
 .section-title {
     @include header_style(var(--fs-section-title));
     margin-bottom: var(--margin-bottom);
+
+    &--mb-large {
+        margin-bottom: calc(2 * var(--margin-bottom));
+    }
 }
 
 .btn {

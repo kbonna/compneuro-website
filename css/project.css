@@ -82,6 +82,10 @@ body {
   margin-bottom: var(--margin-bottom);
 }
 
+.section-title--mb-large {
+  margin-bottom: calc(2 * var(--margin-bottom));
+}
+
 .btn {
   font-family: var(--ff-se);
   font-size: var(--fs-btn);
@@ -530,7 +534,7 @@ footer {
           align-items: flex-start;
   position: relative;
   margin-bottom: var(--margin-bottom);
-  line-height: 1.75;
+  line-height: 1.6;
   text-align: left;
 }
 
@@ -590,7 +594,7 @@ footer {
 
 @media screen and (min-width: 700px) {
   .project-full {
-    padding-right: var(--margin-bottom);
+    padding-right: 55px;
   }
   .project-full__logo {
     -ms-flex-item-align: start;

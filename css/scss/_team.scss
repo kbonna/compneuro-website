@@ -14,6 +14,7 @@
     @media screen and (min-width: $break-team) {
         align-items: stretch;
         flex-direction: row;
+        margin-bottom: calc(3 * var(--margin-bottom));
     }
 }
 
