@@ -6,87 +6,50 @@
 }
 
 .members-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: var(--margin-bottom);
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-gap: 25px;
 
-    @media screen and (min-width: $break-team) {
-        align-items: stretch;
-        flex-direction: row;
-        margin-bottom: calc(3 * var(--margin-bottom));
-    }
+    margin-bottom: 55px;
 }
 
 .member {
-    /* Variables */
-    --vert-padding: 2.5rem;
-    --horiz-padding: 2rem;
-
     // Space between elements
-    --margin-bottom-img: 2em;
+    --margin-bottom-img: 2.5em;
     --margin-bottom-name: 0.5em;
-    --margin-bottom-desc: 2em;
+    --margin-bottom-desc: 2.5em;
 
-    /* Layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
 
-    padding: var(--horiz-padding) 0;
-    max-width: 400px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
 
     &__img {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         margin-bottom: var(--margin-bottom-img);
         width: 150px;
+        border-radius: 5px;
     }
 
     &__name {
         @include header_style(var(--fs-member-title));
         margin-bottom: var(--margin-bottom-name);
+        font-weight: var(--fw-bolder);
     }
 
     &__desc {
-        font-size: var(--fs-member-desc);
-        // line-height: 1.2;
         margin-bottom: var(--margin-bottom-desc);
+        font-size: var(--fs-member-desc);
+        color: #555;
+        max-width: 50ch;
     }
 
     &__socials {
+        flex-grow: 1;
         display: flex;
-        align-items: flex-end;
-        flex-grow: 1;
-    }
-
-    &:after {
-        @include separator-pseudo;
-        bottom: 0px;
-        width: 100%;
-        height: var(--sep-thickness);
-    }
-
-    &:last-child:after {
-        display: none;
-    }
-
-    @media screen and (min-width: $break-team) {
-        padding: 0 var(--vert-padding);
-
-        flex-basis: 0;
-        flex-grow: 1;
-
-        &:after {
-            @include separator-pseudo;
-            right: 0px;
-            height: 100%;
-            width: var(--sep-thickness);
-        }
-
-        &:last-child:after {
-            display: none;
-        }
     }
 }
 

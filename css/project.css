@@ -2,8 +2,8 @@
   /* Fonts */
   --font-ss: 'Raleway', sans-serif;
   --font-se: 'Spectral', serif;
+  --fw-bolder: 700;
   --fw-bold: 600;
-  --fw-medium: 500;
   --fw-normal: 400;
   --fs-common: 1rem;
   --fs-menu-item: 1rem;
